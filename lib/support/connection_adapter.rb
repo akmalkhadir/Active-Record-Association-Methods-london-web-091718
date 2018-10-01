@@ -11,5 +11,7 @@ class ConnectionAdapter
       :adapter => self.adapter,
       :database => self.database
     )
+
+    ActiveRecord::Base.logger = Logger.new(STDOUT)
   end
 end
